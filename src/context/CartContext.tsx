@@ -9,6 +9,7 @@ export interface UserDeliveryData {
     district: string
     city: string
     uf: string
+    // paymentMethod: 'creditCard' | 'debitCard' | 'money'
     paymentMethod: string
 }
 

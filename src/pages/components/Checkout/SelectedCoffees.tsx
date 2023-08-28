@@ -8,7 +8,7 @@ import { SubmitProps } from '../../Checkout'
 //     { file: 'Type=Árabe.png', name: 'Árabe', type:['ESPECIAL'], description:"Bebida preparada com grãos de café árabe e especiarias", price: 9.90, quantity: 2},
 // ]
 
-const SelectedCoffees = ({ onSubmit, error }: SubmitProps) => {
+const SelectedCoffees = ({ submitOrder, error }: SubmitProps) => {
     const { coffeeCart } = useContext(CartContext)
 
     const [totalPrice, setTotalPrice] = useState(0)
@@ -27,7 +27,7 @@ const SelectedCoffees = ({ onSubmit, error }: SubmitProps) => {
     const priceWithTax = deliveryTax + totalPrice
 
     function handleSubmit() {
-        onSubmit()
+        submitOrder()
     }
 
     return (

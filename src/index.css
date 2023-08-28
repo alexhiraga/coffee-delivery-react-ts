@@ -149,6 +149,12 @@ button {
     mask-composite: exclude;
 }
 
+[data-state='checked'] {
+    background-color: #EBE5F9;
+    outline: solid 1px #8047F8;
+}
+
+
 input {
     background-color: #EDEDED;
     padding: 1em;
