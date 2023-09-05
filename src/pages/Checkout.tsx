@@ -45,8 +45,6 @@ const Checkout = () => {
     })
 
     function handleSubmitOrder(data: SearchFormInputs) {
-        console.log(data)
-
         // Check if there all of the inputs are filled
         if(!data.paymentMethod) {
             setError("Selecione o método de pagamento para prosseguir!")
