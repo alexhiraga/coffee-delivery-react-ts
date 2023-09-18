@@ -12,7 +12,7 @@ export interface CoffeGalleryProps {
 }
 
 const CoffeeCard = ({file, name, type, description, price}: CoffeGalleryProps) => {
-    const imagePath = `../../../../../assets/${file}`;
+    const imagePath = `/assets/${file}`;
 
     const [coffeePrice, setCoffeePrice] = useState(9.9)
     const [quantity, setQuantity] = useState(1)

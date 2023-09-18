@@ -3,11 +3,6 @@ import Coffee from './SelectedCoffees/Coffee'
 import { CartContext } from '../../../context/CartContext'
 import { SubmitProps } from '../../Checkout'
 
-// const mock: CoffeGalleryProps[] = [
-//     { file: 'Type=Americano.png', name: 'Expresso Americano', type:['TRADICIONAL'], description:"Expresso diluído, menos intenso que o tradicional", price: 9.90, quantity: 1},
-//     { file: 'Type=Árabe.png', name: 'Árabe', type:['ESPECIAL'], description:"Bebida preparada com grãos de café árabe e especiarias", price: 9.90, quantity: 2},
-// ]
-
 const SelectedCoffees = ({ submitOrder, error }: SubmitProps) => {
     const { coffeeCart } = useContext(CartContext)
 

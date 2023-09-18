@@ -19,7 +19,7 @@ const Navbar = () => {
                     Maringá, PR
                 </div>
 
-                <a href={coffeeQuantity > 0 ? '/checkout' : '/'} className="p-2 bg-yellow-light text-yellow-dark my-auto rounded-md relative hover:text-yellow-dark">
+                <a href={coffeeQuantity > 0 ? '/coffee-delivery-react-ts/checkout' : '/coffee-delivery-react-ts'} className="p-2 bg-yellow-light text-yellow-dark my-auto rounded-md relative hover:text-yellow-dark">
                     <ShoppingCart size={22} />
                     {coffeeQuantity > 0 && (
                         <div className="rounded-full w-5 h-5 bg-yellow-dark absolute -top-2 -right-2 text-white text-XS font-bold flex flex-col justify-center">
