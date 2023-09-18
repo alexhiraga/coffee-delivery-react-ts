@@ -12,7 +12,8 @@ export interface CoffeGalleryProps {
 }
 
 const CoffeeCard = ({file, name, type, description, price}: CoffeGalleryProps) => {
-    const imagePath = `/assets/${file}`;
+    const base_url = window.location.pathname;
+    const imagePath = `${base_url}/assets/${file}`;
 
     const [coffeePrice, setCoffeePrice] = useState(9.9)
     const [quantity, setQuantity] = useState(1)

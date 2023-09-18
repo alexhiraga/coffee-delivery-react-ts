@@ -19,7 +19,9 @@ const Coffee = ({coffee}: Props) => {
     }, [coffee.quantity])
     const { refreshCoffeeInCart, removeCoffeeFromCart } = useContext(CartContext)
 
-    const imagePath = `/assets/${coffee.file}`;
+    const url = window.location.pathname.split('/');
+    const base_url = url[1]
+    const imagePath = `/${base_url}/assets/${coffee.file}`;
     const price = coffee.quantity ? coffee.price * coffee.quantity : 0
 
     function handleRefreshCoffeeInCart(newQuantity: number) {
