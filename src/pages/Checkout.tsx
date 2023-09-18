@@ -63,7 +63,7 @@ const Checkout = () => {
         // If there is no error, create the order
         if(!errorMessage) {
             const orderData = createNewOrder(data)
-            if(orderData) navigate('/success')        
+            if(orderData) navigate('/coffee-delivery-react-ts/success')        
         } 
 
         // Remove the error badge in screen

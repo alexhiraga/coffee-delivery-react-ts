@@ -38,7 +38,7 @@ const Coffee = ({coffee}: Props) => {
         const updatedCart = removeCoffeeFromCart(coffee)
 
         // Redirect to home page if the cart is empty
-        if(updatedCart.length === 0) navigate("/")
+        if(updatedCart.length === 0) navigate("/coffee-delivery-react-ts")
     }
 
     return (
