@@ -16,11 +16,15 @@ const Navbar = () => {
         else navigate("/coffee-delivery-react-ts")
     }
 
+    const navigateToHomepage = () => {
+        navigate("/coffee-delivery-react-ts")
+    }
+
     return (
         <div className="h-28 flex justify-between content">
-            <a href="/" className="my-auto">
+            <button onClick={navigateToHomepage} className="my-auto">
                 <img src={Logo} className="w-[85px]" />
-            </a>
+            </button>
             <div className="flex gap-2">
                 <div className="bg-purple-light p-2 flex items-center text-purple-dark rounded-md my-auto text-S gap-1">
                     <MapPin size={22} />
