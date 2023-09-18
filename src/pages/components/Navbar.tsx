@@ -2,11 +2,19 @@ import { MapPin, ShoppingCart } from 'phosphor-react'
 import Logo from '../../assets/LogoCoffeeDelivery.svg'
 import { CartContext } from '../../context/CartContext'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
     const { coffeeCart } = useContext(CartContext)
 
     const coffeeQuantity = coffeeCart ? coffeeCart.length : 0
+
+    const navigate = useNavigate()
+
+    const navigateToCheckout = () => {
+        if(coffeeQuantity > 0) navigate("/coffee-delivery-react-ts/checkout")
+        else navigate("/coffee-delivery-react-ts")
+    }
 
     return (
         <div className="h-28 flex justify-between content">
@@ -19,14 +27,14 @@ const Navbar = () => {
                     Maringá, PR
                 </div>
 
-                <a href={coffeeQuantity > 0 ? '/coffee-delivery-react-ts/checkout' : '/coffee-delivery-react-ts'} className="p-2 bg-yellow-light text-yellow-dark my-auto rounded-md relative hover:text-yellow-dark">
+                <button onClick={navigateToCheckout} className="p-2 bg-yellow-light text-yellow-dark my-auto rounded-md relative hover:text-yellow-dark">
                     <ShoppingCart size={22} />
                     {coffeeQuantity > 0 && (
                         <div className="rounded-full w-5 h-5 bg-yellow-dark absolute -top-2 -right-2 text-white text-XS font-bold flex flex-col justify-center">
                             {coffeeQuantity}
                         </div>
                     )}
-                </a>
+                </button>
 
             </div>
         </div>

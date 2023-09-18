@@ -9,8 +9,8 @@ function App() {
         <>
             <div className="text-center mx-auto">
                 <CartContextProvider>
-                    <Navbar />
                     <BrowserRouter>
+                        <Navbar />
                         <Router />
                     </BrowserRouter>
                 </CartContextProvider>
